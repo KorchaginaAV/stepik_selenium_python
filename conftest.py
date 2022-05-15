@@ -29,7 +29,7 @@ def browser(request):
             "prefs", {"intl.accept_languages": user_language}
         )
         if headless:
-            chr_options.add_argument(headless)
+            chr_options.add_argument("--headless")
             chr_options.add_argument("window-size=1920x935")
         browser = webdriver.Chrome(options=chr_options)
     elif browser_name == "firefox":
