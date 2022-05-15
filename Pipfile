@@ -4,6 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+black = "*"
+selenium = "*"
+isort = "*"
 
 [dev-packages]
 
