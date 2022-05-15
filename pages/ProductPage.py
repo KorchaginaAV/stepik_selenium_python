@@ -15,9 +15,6 @@ class ProductPage(BasePage):
         product_title = self.browser.find_element(
             *ProductPageLocators.PRODUCT_TITLE
         ).text
-        success_message = self.browser.find_element(
-            *ProductPageLocators.SUCCESS_MESSAGE_ADD_PRODUCT_TO_BASKET
-        ).text
         product_name_in_success_message = self.browser.find_element(
             *ProductPageLocators.NAME_OF_PRODUCT_WAS_ADDED_TO_BASKET
         ).text
