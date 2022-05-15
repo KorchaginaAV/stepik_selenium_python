@@ -10,7 +10,9 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         current_url = self.browser.current_url
-        assert current_url.find("login") != -1, f'Текущий url "{current_url}", а не страница логина'
+        assert (
+            current_url.find("login") != -1
+        ), f'Текущий url "{current_url}", а не страница логина'
 
     def should_be_login_form(self):
         assert self.is_element_present(
