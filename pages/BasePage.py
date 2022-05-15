@@ -1,6 +1,7 @@
 import math
 
-from selenium.common.exceptions import NoAlertPresentException, NoSuchElementException
+from selenium.common.exceptions import (NoAlertPresentException,
+                                        NoSuchElementException)
 
 
 class BasePage:

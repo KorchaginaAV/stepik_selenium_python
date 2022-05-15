@@ -1,7 +1,7 @@
 import time
 
-from .Base_page import BasePage
-from .locators import ProductPageLocators
+from .BasePage import BasePage
+from .Locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
@@ -24,10 +24,6 @@ class ProductPage(BasePage):
         assert (
             product_name_in_success_message == product_title
         ), f'Добавленный товар "{product_name_in_success_message}", a не "{product_title}"'
-        assert success_message == f"{product_title} has been added to your basket.", (
-            f'Сообщение о добавлении товара в корзину "{success_message}",'
-            f' не соответствует - "{product_title} has been added to your basket."'
-        )
 
     def matches_price_in_basket_with_price_of_added_product(self):
         price_in_basket = self.browser.find_element(
