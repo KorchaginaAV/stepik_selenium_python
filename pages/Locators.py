@@ -8,6 +8,10 @@ class MainPageLocators:
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "form#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "form#register_form")
+    REGISTRATION_EMAIL = (By.CSS_SELECTOR, "input[name=registration-email]")
+    REGISTRATION_PASSWORD1 = (By.CSS_SELECTOR, "input[name=registration-password1]")
+    REGISTRATION_PASSWORD2 = (By.CSS_SELECTOR, "input[name=registration-password2]")
+    REGISTRATION_BUTTON = (By.CSS_SELECTOR, "button[name=registration_submit]")
 
 
 class ProductPageLocators:
