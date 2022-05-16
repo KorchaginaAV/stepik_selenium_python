@@ -1,3 +1,5 @@
+import time
+
 from .BasePage import BasePage
 from .Locators import LoginPageLocators
 
@@ -40,4 +42,4 @@ class LoginPage(BasePage):
         registration_button = self.browser.find_element(
             *LoginPageLocators.REGISTRATION_BUTTON
         )
-        registration_button.submit()
+        registration_button.click()
