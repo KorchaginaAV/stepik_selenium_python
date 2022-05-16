@@ -1,14 +1,21 @@
-import time
-
 import pytest
 
 from .pages.BasketPage import BasketPage
 from .pages.LoginPage import LoginPage
 from .pages.ProductPage import ProductPage
-from .test_data import promo_urls
+from .test_data import email, promo_urls
 
 
+@pytest.mark.test_user
 class TestUserAddToBasketFromProductPage:
+    @pytest.fixture(autouse=True)
+    def setup(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/accounts/login/"
+        login_page = LoginPage(browser, link)
+        login_page.open()
+        login_page.register_new_user(email, "fnkmYtm348fP")
+        login_page.should_be_authorized_user()
+
     def test_user_cant_see_success_message(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019"
         page = ProductPage(browser, link)
