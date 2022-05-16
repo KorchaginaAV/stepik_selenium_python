@@ -8,6 +8,7 @@ black = "*"
 selenium = "*"
 isort = "*"
 pytest = "*"
+faker = "*"
 
 [dev-packages]
 
